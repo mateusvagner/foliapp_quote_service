@@ -1,4 +1,4 @@
-package com.foliapp.quoseservice;
+package com.foliapp.quoteservice;
 
 import io.quarkus.test.junit.QuarkusTest;
 import org.junit.jupiter.api.Test;
