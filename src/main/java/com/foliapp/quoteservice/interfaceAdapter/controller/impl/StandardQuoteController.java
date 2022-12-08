@@ -51,10 +51,12 @@ public class StandardQuoteController implements QuoteController {
         List<QuoteResource> quotes = new ArrayList<>();
 
         for (QuoteEntity quoteEntity : quoteEntities) {
-            CustomerResource customerResource = registerRemoteService.getCustomerById(quoteEntity.getCustomerId().toString());
+            String customerId = quoteEntity.getCustomerId().toString();
+            CustomerResource customerResource = registerRemoteService.getCustomerById(customerId);
 
             QuoteResource quoteResource = new QuoteResource();
             quoteResource.setId(quoteEntity.getId());
+            quoteResource.setOwnerKeyIdentifier(quoteEntity.getOwnerKeyIdentifier());
             quoteResource.setProjectName(quoteEntity.getProjectName());
             quoteResource.setCustomer(customerResource);
             quoteResource.setTotal(quoteEntity.getTotal());
