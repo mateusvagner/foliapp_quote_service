@@ -14,7 +14,7 @@ public class StandardQuoteItemMapper implements QuoteItemMapper {
     @Override
     public QuoteItemEntity fromResourceToEntity(QuoteItemResource quoteItem) {
         QuoteItemEntity quoteItemEntity = new QuoteItemEntity();
-        quoteItemEntity.setId(quoteItem.getId());
+//        quoteItemEntity.setId(quoteItem.getId());
         quoteItemEntity.setItem(quoteItem.getItem());
         quoteItemEntity.setQuantity(quoteItem.getQuantity());
         return quoteItemEntity;

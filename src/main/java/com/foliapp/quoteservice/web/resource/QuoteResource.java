@@ -5,9 +5,9 @@ import java.util.List;
 public class QuoteResource {
 
     private Long id;
+    private String ownerKeyIdentifier;
     private String projectName;
     private CustomerResource customer;
-
     private String total;
     private List<QuoteItemResource> quoteItems;
 
@@ -17,6 +17,14 @@ public class QuoteResource {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getOwnerKeyIdentifier() {
+        return ownerKeyIdentifier;
+    }
+
+    public void setOwnerKeyIdentifier(String ownerKeyIdentifier) {
+        this.ownerKeyIdentifier = ownerKeyIdentifier;
     }
 
     public String getProjectName() {

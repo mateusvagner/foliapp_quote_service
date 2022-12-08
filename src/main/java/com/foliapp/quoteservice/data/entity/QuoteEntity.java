@@ -11,6 +11,8 @@ public class QuoteEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
 
+    private String ownerKeyIdentifier;
+
     private String projectName;
 
     private Long customerId;
@@ -31,6 +33,14 @@ public class QuoteEntity {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getOwnerKeyIdentifier() {
+        return ownerKeyIdentifier;
+    }
+
+    public void setOwnerKeyIdentifier(String ownerKeyIdentifier) {
+        this.ownerKeyIdentifier = ownerKeyIdentifier;
     }
 
     public String getProjectName() {
