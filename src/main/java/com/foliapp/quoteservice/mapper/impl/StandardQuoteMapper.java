@@ -17,7 +17,8 @@ public class StandardQuoteMapper implements QuoteMapper {
     @Override
     public QuoteEntity fromResourceToEntity(QuoteResource quote) {
         QuoteEntity entity = new QuoteEntity();
-        entity.setId(quote.getId());
+//        entity.setId(quote.getId());
+        entity.setOwnerKeyIdentifier(quote.getOwnerKeyIdentifier());
         entity.setProjectName(quote.getProjectName());
         entity.setCustomerId(quote.getCustomer().getId());
         entity.setTotal(quote.getTotal());

@@ -3,10 +3,12 @@ package com.foliapp.quoteservice.web.resource;
 public class CustomerResource {
 
     private Long id;
-    String name;
-    String phone;
-    String email;
-    String address;
+
+    private String ownerKeyIdentifier;
+    private String name;
+    private String phone;
+    private String email;
+    private String address;
 
     public Long getId() {
         return id;
@@ -14,6 +16,14 @@ public class CustomerResource {
 
     public void setId(Long id) {
         this.id = id;
+    }
+
+    public String getOwnerKeyIdentifier() {
+        return ownerKeyIdentifier;
+    }
+
+    public void setOwnerKeyIdentifier(String ownerKeyIdentifier) {
+        this.ownerKeyIdentifier = ownerKeyIdentifier;
     }
 
     public String getName() {
